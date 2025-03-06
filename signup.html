@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - G.B.S Roadlines</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <img src="hero.png" alt="G.B.S Roadlines" class="logo-img">
+        <h1>G.B.S Roadlines</h1>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Signup Section -->
+  <section class="login-section">
+    <h2>Create Your Account</h2>
+    <form id="signupForm" class="login-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required pattern="[A-Za-z]+" title="Username can only contain letters">
+
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required title="Please enter a valid email address">
+
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required 
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" 
+          title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&).">
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="cta-button">Sign Up</button>
+      </div>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+    <p id="error-message" class="error-message" style="color: red; display: none;"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 G.B.S Roadlines. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Get form data
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      // Validate password match
+      if (password !== confirmPassword) {
+        document.getElementById("error-message").innerText = "Passwords do not match.";
+        document.getElementById("error-message").style.display = "block";
+        return;
+      }
+
+      // Send data to the backend
+      try {
+        const response = await fetch("/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, email, password }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          alert("Signup successful! Please login.");
+          window.location.href = "/login.html"; // Redirect to login page
+        } else {
+          document.getElementById("error-message").innerText = result.error || "Signup failed. Please try again.";
+          document.getElementById("error-message").style.display = "block";
+        }
+      } catch (error) {
+        console.error("Error during signup:", error);
+        document.getElementById("error-message").innerText = "An error occurred. Please try again.";
+        document.getElementById("error-message").style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>

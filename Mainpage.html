@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quality building materials supplier - bricks, manufactured cement blocks, jelly, sand, and transportation services" />
+    <meta name="keywords" content="building materials, cement blocks, stones, sand, jelly, aggregates, transportation, lorry, tempo, JCB" />
+    <meta name="author" content="G.B.S Roadlines - Building Materials" />
+    <title>G.B.S Roadlines</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+   
+    <!-- Navigation Section -->
+    <nav>
+      <a href="#home" class="logo">G.B.S Roadlines</a>
+      <div class="nav-links">
+        <a href="product.html">Products</a> <!-- Points to the Products section -->
+        <a href="#services">Services</a> <!-- Points to the Services section -->
+        <a href="#order">Order</a> <!-- Points to the Order section -->
+        <a href="#contact">Contact</a> <!-- Points to the Contact section -->
+      </div>
+    </nav>
+    
+   
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <h1>Building Dreams Together</h1>
+        <p>Your premier destination for quality construction materials and reliable delivery services</p>
+        <div class="hero-cta">
+          <a href="#products" class="cta-button">Explore Products</a>
+        </div>
+      </section>
+      
+
+      <!-- Products Section -->
+      <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="service-items">
+          <!-- Cement Block -->
+          <div class="service">
+            <div class="img-container">
+              <img src="solid cb.jpg" alt="cement blocks" />
+            </div>
+            <h3>Cement Block</h3>
+            <p>High-quality bricks and cement blocks (4", 6", 8", solid)</p>
+          </div>
+          <!-- Laterite Stone -->
+          <div class="service">
+            <div class="img-container">
+              <img src="red-laterite-stones.png" alt="Stone" />
+            </div>
+            <h3>Laterite Stone</h3>
+            <p>Durable red rock perfect for construction</p>
+          </div>
+          <!-- Jelly & Aggregates -->
+          <div class="service">
+            <div class="img-container">
+              <img src="40mm-jelly-construction-aggregate-500x500.webp" alt="Jelly" />
+            </div>
+            <h3>Jelly & Aggregates</h3>
+            <p>Various sizes: 6mm, 10mm, 20mm, 40mm, M-sand, P-sand, dust, wet mix</p>
+          </div>
+          <!-- River Sand -->
+          <div class="service">
+            <div class="img-container">
+              <img src="river-sand.jpeg" alt="sand" />
+            </div>
+            <h3>River Sand</h3>
+            <p>High-quality river sand for construction needs</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services">
+        <h2>Our Transportation Services</h2>
+        <div class="service-items">
+          <!-- Lorry Service -->
+          <div class="service">
+            <div class="img-container">
+              <img src="lorry.jpg" alt="Transportation service" />
+            </div>
+            <h3>Lorry Service</h3>
+            <p>Heavy-duty transportation for bulk materials</p>
+          </div>
+          <!-- Tempo Service -->
+          <div class="service">
+            <div class="img-container">
+              <img src="tempo.jpg" alt="Temp" />
+            </div>
+            <h3>Tempo Service</h3>
+            <p>Efficient delivery for medium-sized orders</p>
+          </div>
+          <!-- JCB Service -->
+          <div class="service">
+            <div class="img-container">
+              <img src="jcb.jpg" alt="JCB" />
+            </div>
+            <h3>JCB Service</h3>
+            <p>Available for loading and unloading at your site</p>
+          </div>
+        </div>
+      </section>
+
+     <!-- Order Section -->
+<section id="order" class="order">
+  <h2>Place Your Order</h2>
+  <div class="order-info">
+    <p>Simple ordering process with delivery included:</p>
+    <ol>
+      <li>Fill out the order form</li>
+      <li>We'll contact you with a quote</li>
+      <li>Confirm your order</li>
+      <li>Get your materials delivered</li>
+    </ol>
+  </div>
+  <form id="orderForm">
+    <!-- Full Name -->
+    <div class="form-group">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="full_name" required />
+    </div>
+    <!-- Phone Number -->
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" name="phone_number" required />
+    </div>
+    <!-- Delivery Address -->
+    <div class="form-group">
+      <label for="deliveryAddress">Delivery Address:</label>
+      <textarea id="deliveryAddress" name="delivery_address" required></textarea>
+    </div>
+    <!-- Materials Selection -->
+    <div class="form-group">
+      <label>Select Materials:</label>
+      <div class="checkbox-group">
+        <fieldset>
+          <legend>Cement Blocks</legend>
+          <label><input type="checkbox" name="materials" value="4inch" /> 4 inch Block</label>
+          <label><input type="checkbox" name="materials" value="6inch" /> 6 inch Block</label>
+          <label><input type="checkbox" name="materials" value="8inch" /> 8 inch Block</label>
+          <label><input type="checkbox" name="materials" value="solid" /> Solid Blocks</label>
+        </fieldset>
+        <fieldset>
+          <legend>Stones</legend>
+          <label><input type="checkbox" name="materials" value="laterite" /> Laterite Stone</label>
+        </fieldset>
+        <fieldset>
+          <legend>Sand</legend>
+          <label><input type="checkbox" name="materials" value="riversand" /> River Sand</label>
+        </fieldset>
+        <fieldset>
+          <legend>Jelly & Aggregates</legend>
+          <label><input type="checkbox" name="materials" value="6mm" /> 6mm Jelly</label>
+          <label><input type="checkbox" name="materials" value="10mm" /> 10mm Jelly</label>
+          <label><input type="checkbox" name="materials" value="20mm" /> 20mm Jelly</label>
+          <label><input type="checkbox" name="materials" value="40mm" /> 40mm Jelly</label>
+          <label><input type="checkbox" name="materials" value="msand" /> M Sand</label>
+          <label><input type="checkbox" name="materials" value="psand" /> P Sand</label>
+          <label><input type="checkbox" name="materials" value="dust" /> Dust</label>
+          <label><input type="checkbox" name="materials" value="wetmix" /> Wet Mix</label>
+        </fieldset>
+      </div>
+    </div>
+    <!-- Preferred Transportation -->
+    <div class="form-group">
+      <label for="transport">Preferred Transportation:</label>
+      <select id="transport" name="transport_option" required>
+        <option value="">Our team will recommend the best option</option>
+        <option value="lorry">Lorry</option>
+        <option value="tempo">Tempo</option>
+        <option value="jcb">JCB (Additional Service)</option>
+      </select>
+    </div>
+    <button type="submit" id="submitOrder">Request Quote</button>
+  </form>
+  <p id="error-message" style="color: red; display: none;"></p>
+</section>
+
+<script>
+  document.getElementById("orderForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(e.target);
+    const data = {
+      full_name: formData.get("full_name"),
+      phone_number: formData.get("phone_number"),
+      delivery_address: formData.get("delivery_address"),
+      materials: formData.getAll("materials"), // Get all selected materials
+      transport_option: formData.get("transport_option"),
+    };
+
+    try {
+      const response = await fetch("/submitOrder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert("Order placed successfully!");
+        window.location.href = "/"; // Redirect to the homepage or another page
+      } else {
+        const errorMessage = await response.text();
+        document.getElementById("error-message").innerText = errorMessage;
+        document.getElementById("error-message").style.display = "block";
+      }
+    } catch (error) {
+      console.error("Error placing order:", error);
+      document.getElementById("error-message").innerText = "An error occurred. Please try again.";
+      document.getElementById("error-message").style.display = "block";
+    }
+  });
+</script>
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <div class="contact-details">
+            <h3>Get in Touch</h3>
+            <p>📞 Mobile number: <a href="mobile:+91 9448383511">91 9448383511</a></p>
+            <p>📧 Email: <a href="mailto:divinetrvls@yahoo.co.in">divinetrvls@yahoo.co.in</a></p>
+            <p>🏢 Address: Kinnigoli Opposite To Petrol Pump</p>
+            <p>⏰ Hours: Monday - Saturday: 9:00 AM - 6:00 PM</p>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.525408518386!2d74.8517246746053!3d13.06585301280582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba3536a42aa57ed%3A0xc14e66f204e173ef!2sHP%20PETROL%20PUMP%20-%20KINNIGOLI%20SERVICE%20STATION!5e0!3m2!1sen!2sin!4v1730649603006!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-placeholder">Map Location</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 BuildMart Supplies. All rights reserved.</p>
+    </footer>
+   
+    
+  </body>
+</html>

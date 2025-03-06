@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - G.B.S Roadlines</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <img src="hero.png" alt="G.B.S Roadlines" class="logo-img">
+        <h1>G.B.S Roadlines</h1>
+      </div>
+      <ul class="nav-links">
+       
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <h2>Login to Your Account</h2>
+    <form action="/login" method="POST" class="login-form">
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" 
+        title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&).">
+ 
+      </div>
+      <div class="form-group">
+        <button type="submit" class="cta-button">Login</button>
+      </div>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 G.B.S Roadlines. All rights reserved.</p>
+  </footer>
+</body>
+</html>

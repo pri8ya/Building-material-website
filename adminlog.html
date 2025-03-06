@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - G.B.S Roadlines</title>
+  <style>
+    /* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+        background: linear-gradient(45deg, #81c784, #ffe082); /* Green and Yellow gradient */
+        padding: 15px 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar h1 {
+        font-size: 2rem;
+        margin: 0;
+        display: inline-block; /* Makes the text and image align side by side */
+        margin-left: 10px;
+    }
+
+    .navbar img {
+        width: 50px;
+        height: auto;
+    }
+
+    /* Login Section Styles */
+    .login-section {
+        background-color: #fff;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        margin: 30px auto;
+    }
+
+    .login-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 8px;
+        color: #333;
+        text-align: left;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .form-group input:focus {
+        border-color: #81c784;
+        outline: none;
+    }
+
+    .form-group input::placeholder {
+        color: #999;
+    }
+
+    .cta-button {
+        width: 100%;
+        background-color: #81c784; /* Light green color */
+        color: #fff;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #66bb6a; /* Slightly darker green */
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: auto;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <img src="hero.png" alt="G.B.S Roadlines Logo"> <!-- Add your logo here -->
+    <h1>G.B.S Roadlines</h1>
+  </header>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <h2>Admin Login</h2>
+    <form method="POST" action="/admin/login">
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="cta-button">Login</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 G.B.S Roadlines. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
